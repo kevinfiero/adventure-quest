@@ -13,14 +13,16 @@ startButton.addEventListener('click', () => {
 
     const user = {
         name: '',
-        rep: 0,
-        gold: 0,
+        rep: 50,
+        gold: 50,
         visited: []
 
     };
 
     user.name = nameForm.value;
     console.log(user.name);
+
+    setInLocalStorage('user', user);
 
 
 
