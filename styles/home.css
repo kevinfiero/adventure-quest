@@ -1,0 +1,42 @@
+/* add home page styles here */
+
+input[type='radio']{
+    display: none;
+}
+
+input[type='radio']:checked + img{
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.pick-avatar{
+    width: 150px;
+    height: 150px;
+    margin: 0px 30px 0px 30px;
+    padding: 10px;
+}
+
+#avatar-container{
+    justify-content: space-evenly;
+    margin: 0px 0px 30px 0px;
+}
+
+input[type='text']{
+    text-align: center;
+}
+
+#choose-char-label{
+    font-size: 50px;
+    margin: 60px 0px 40px 0px;
+}
+
+#name-form{
+    margin: 40px 0px 20px 0px;
+    font-size: 20px;
+}
+
+#start-button{
+    font-size: 20px;
+}
+
