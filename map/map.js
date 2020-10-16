@@ -1,4 +1,4 @@
-import { getFromLocalStorage, setInLocalStorage } from '../utils.js';
+import { getFromLocalStorage } from '../utils.js';
 
 const goldDiv = document.getElementById('gold-val');
 const repDiv = document.getElementById('rep-val');
