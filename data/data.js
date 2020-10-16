@@ -1,6 +1,7 @@
 export default [
     {
         id: 'village',
+        nextId: 'wall',
         title: 'Cave of Gold',
         image: '../assets/cave.jpg',
         description: 'As you set off on your adventure you stumble upon a cave of gold! Lucky you! Overjoyed with happiness you head off to the next village and treat yourself at the local tavern. You buy a round of drinks for everyone and tell them the story. At some point in the night an older woman approaches you and asks if you could help her pay for contractors to help rebuild her neighborhood that burned down. What do you say?',
@@ -31,6 +32,7 @@ export default [
     ,
     {
         id: 'wall',
+        nextId: 'pier',
         title: 'Wall Maria',
         image: '../assets/wall.png',
         description: 'As you continue on your journey you approach a large wall. As you get closer a man yells from an outlet on the middle of the wall, "What is your business here?"',
@@ -60,6 +62,7 @@ export default [
     },
     {
         id: 'pier',
+        nextId: 'castle',
         title: 'Odin\'s Port',
         image: '../assets/pier.jpg',
         description: 'After walking for days you finally reach a city on a port. You can see an island across the way with a huge castle! You meet one of the dock owners and he offers to help you get across. Which vessel do you take?',
@@ -89,6 +92,7 @@ export default [
     },
     {
         id: 'castle',
+        nextId: 'village',
         title: 'Castle',
         image: '../assets/castle.jpg',
         description: 'Now that you have your land legs again you trek to the castle gates. What do you do?',
