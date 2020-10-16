@@ -81,9 +81,9 @@ export default [
             {
                 id: 'large',
                 description: 'Ship',
-                outcome: 'You rent a large ship and invite a few locals to join you to party along the way. However, with all the partying going on nobody noticed shore slowly approaching. The locals on land yell but it is too late - the ship crashes through the pier and causes significant damages. You flee the scene.',
-                gold: -50,
-                rep: -20
+                outcome: 'You rent a large ship and invite a few locals to join you to party along the way. You charge them a fee to join your journey. However, with all the partying going on nobody noticed shore slowly approaching. The locals on land yell but it is too late - the ship crashes through the pier and causes significant damages. You flee the scene.',
+                gold: 50,
+                rep: -30
             }
         ]
     },
@@ -110,8 +110,8 @@ export default [
             {
                 id: 'nothing',
                 description: 'Look at the view.',
-                outcome: 'You soak in the view as your quest comes to an end.',
-                gold: 0,
+                outcome: 'You soak in the view as your quest comes to an end. While you are enjoying the day you stumble across a small amount of gold.',
+                gold: 10,
                 rep: 0
             }
         ]
