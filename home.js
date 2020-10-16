@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 localStorage.clear();
-import { setInLocalStorage } from "./utils.js";
+import { setInLocalStorage } from './utils.js';
 
 // initialize state
 

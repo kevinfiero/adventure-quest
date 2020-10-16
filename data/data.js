@@ -106,6 +106,13 @@ export default [
                 outcome: 'You chat with the guard who is interested to hear about your adventure so far. He lets you through the gates to explore the castle interior and converse with the nobles.',
                 gold: 0,
                 rep: 30
+            },
+            {
+                id: 'nothing',
+                description: 'Look at the view.',
+                outcome: 'You soak in the view as your quest comes to an end.',
+                gold: 0,
+                rep: 0
             }
         ]
     }
