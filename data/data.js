@@ -87,6 +87,28 @@ export default [
             }
         ]
     }
+    {
+        id: 'castle',
+        title: 'Castle',
+        image: '../assets/castle.jpg',
+        description: 'Now that you have your land legs again you trek to the castle gates. What do you do?',
+        choices: [
+            {
+                id: 'risky',
+                description: 'Jump the wall.',
+                outcome: 'You evade the guards and make it into the castle. You manage to make your way to the treasure room and grab a handful of gems and other valuable items you can sell later.',
+                gold: 100,
+                rep: -30
+            },
+            {
+                id: 'polite',
+                description: 'Talk to the guard.',
+                outcome: 'You chat with the guard who is interested to hear about your adventure so far. He lets you through the gates to explore the castle interior and converse with the nobles.',
+                gold: 0,
+                rep: 30
+            }
+        ]
+    }
 ];
     
     
