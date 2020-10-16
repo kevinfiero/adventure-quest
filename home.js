@@ -20,13 +20,12 @@ startButton.addEventListener('click', () => {
         rep: 50,
         gold: 50,
         visited: []
-
     };
+    
     const checkedRadioButton = document.querySelector(':checked');
 
     let avatar = checkedRadioButton.value;
     let avatarURL = `../assets/${avatar}.svg`;
-    console.log(checkedRadioButton);
 
     user.name = nameForm.value;
     user.avatar = avatar;
