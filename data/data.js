@@ -86,7 +86,7 @@ export default [
                 rep: -20
             }
         ]
-    }
+    },
     {
         id: 'castle',
         title: 'Castle',
