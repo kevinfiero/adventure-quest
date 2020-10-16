@@ -1,12 +1,12 @@
-import { findByID, getFromLocalStorage } from '../utils.js';
+import { findByID, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 import scenarios from '../data/data.js';
 
-const goldDiv = document.getElementById('gold-val');
-const repDiv = document.getElementById('rep-val');
+let goldDiv = document.getElementById('gold-val');
+let repDiv = document.getElementById('rep-val');
 const nameDiv = document.getElementById('user-name');
 const avatarDiv = document.getElementById('avatar');
 
-const user = getFromLocalStorage('user');
+let user = getFromLocalStorage('user');
 
 goldDiv.textContent = user.gold;
 repDiv.textContent = user.rep;
@@ -15,7 +15,6 @@ avatarDiv.src = user.avatarURL;
 
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
-console.log(id);
 let i;
 if (id === 'cave'){
     i = 0;
@@ -99,17 +98,28 @@ mainDiv.appendChild(continueButtonDiv);
 
 optionButtonDiv.addEventListener('click', () => {
     const checkedRadioButton = document.querySelector('input[type=radio]:checked');
-    console.log(checkedRadioButton.id);
-    console.log(scenarios[i].choices);
-    const text = findByID(scenarios[i].choices, checkedRadioButton.id);
-
-    pDiv.textContent = text.outcome;
+    const id = checkedRadioButton.id;
+    const outcomeChoice = findByID(scenarios[i].choices, id);
+    pDiv.textContent = outcomeChoice.outcome;
     const div = document.getElementsByClassName('flex-column')[1];
     div.style.display = 'none';
 
     continueButtonDiv.style.display = 'block';
     optionButtonDiv.style.display = 'none';
-    
+
+    user = getFromLocalStorage('user');
+
+    let currentGold = outcomeChoice.gold + user.gold;
+    let currentRep = outcomeChoice.rep + user.rep;
+
+    goldDiv.textContent = currentGold;
+    repDiv.textContent = currentRep;
+
+    user.gold = currentGold;
+    user.rep = currentRep;
+
+    setInLocalStorage('user', user);
+
 });
 
 
