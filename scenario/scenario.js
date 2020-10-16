@@ -1,4 +1,4 @@
-import { getFromLocalStorage } from '../utils.js';
+import { findByID, getFromLocalStorage } from '../utils.js';
 import scenarios from '../data/data.js';
 
 const goldDiv = document.getElementById('gold-val');
@@ -42,24 +42,28 @@ pDiv.textContent = scenarios[i].description;
 
 const columnDiv = document.createElement('div');
 columnDiv.classList.add('flex-column');
-const rowDivi = document.createElement('div');
-rowDivi.classList.add('flex-row');
-const rowDiv1 = document.createElement('div');
+const rowDiv0 = document.createElement('label');
+rowDiv0.classList.add('flex-row');
+const rowDiv1 = document.createElement('label');
 rowDiv1.classList.add('flex-row');
-const rowDiv3 = document.createElement('div');
-rowDiv3.classList.add('flex-row');
+const rowDiv2 = document.createElement('label');
+rowDiv2.classList.add('flex-row');
+const inputDiv0 = document.createElement('input');
+inputDiv0.type = 'radio';
+inputDiv0.name = 'options';
+inputDiv0.checked = true;
+inputDiv0.id = scenarios[i].choices[0].id;
 const inputDiv1 = document.createElement('input');
 inputDiv1.type = 'radio';
 inputDiv1.name = 'options';
+inputDiv1.id = scenarios[i].choices[1].id;
 const inputDiv2 = document.createElement('input');
 inputDiv2.type = 'radio';
 inputDiv2.name = 'options';
-const rowDiv2 = document.createElement('input');
-rowDiv2.type = 'radio';
-rowDiv2.name = 'options';
+inputDiv2.id = scenarios[i].choices[2].id;
 
-const opti = document.createElement('label');
-opti.textContent = scenarios[i].choices[0].description;
+const opt0 = document.createElement('label');
+opt0.textContent = scenarios[i].choices[0].description;
 const opt1 = document.createElement('label');
 opt1.textContent = scenarios[i].choices[1].description;
 const opt2 = document.createElement('label');
@@ -69,22 +73,49 @@ const optionButtonDiv = document.createElement('button');
 optionButtonDiv.textContent = 'Do it!';
 optionButtonDiv.id = 'option-button';
 
+const continueButtonDiv = document.createElement('button');
+continueButtonDiv.textContent = 'Continue!';
+continueButtonDiv.id = 'continue-button';
+continueButtonDiv.style.display = 'none';
+
 mainDiv.appendChild(labelDiv);
 mainDiv.appendChild(imgDiv);
 mainDiv.appendChild(pDiv);
 mainDiv.appendChild(columnDiv);
-columnDiv.appendChild(rowDivi);
-rowDivi.appendChild(inputDiv1);
-rowDivi.appendChild(opti);
+columnDiv.appendChild(rowDiv0);
+rowDiv0.appendChild(inputDiv0);
+rowDiv0.appendChild(opt0);
 columnDiv.appendChild(rowDiv1);
-rowDiv1.appendChild(inputDiv2);
+rowDiv1.appendChild(inputDiv1);
 rowDiv1.appendChild(opt1);
-columnDiv.appendChild(rowDiv3);
-rowDiv3.appendChild(rowDiv2);
-rowDiv3.appendChild(opt2);
+columnDiv.appendChild(rowDiv2);
+rowDiv2.appendChild(inputDiv2);
+rowDiv2.appendChild(opt2);
 mainDiv.appendChild(optionButtonDiv);
+mainDiv.appendChild(continueButtonDiv);
 
 
+
+
+optionButtonDiv.addEventListener('click', () => {
+    const checkedRadioButton = document.querySelector('input[type=radio]:checked');
+    console.log(checkedRadioButton.id);
+    console.log(scenarios[i].choices);
+    const text = findByID(scenarios[i].choices, checkedRadioButton.id);
+
+    pDiv.textContent = text.outcome;
+    const div = document.getElementsByClassName('flex-column')[1];
+    div.style.display = 'none';
+
+    continueButtonDiv.style.display = 'block';
+    optionButtonDiv.style.display = 'none';
+    
+});
+
+
+continueButtonDiv.addEventListener('click', () => {
+    window.location.replace('../map/map.html');
+});
 
 
 
