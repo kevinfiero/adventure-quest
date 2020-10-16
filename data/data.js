@@ -9,21 +9,21 @@ export default [
             {
                 id: 'selfish',
                 description: 'Finders keepers! You\'re lucky I bought you all drinks tonight!',
-                outcome: 'You keep all of the gold you found but the villagers are not happy with you for your selfishness. You leave town immediately in fear of getting your treasure stolen.',
+                outcome: 'You keep all of the gold you found but the villagers are not happy with you for your selfishness so your reputation decreases. You leave town immediately in fear of getting your treasure stolen.',
                 gold: 50,
                 rep: -30
             },
             {
                 id: 'moderate',
                 description: 'I can spare a few gold just for you but your neighbors will need to find their own way.',
-                outcome: 'The woman is extremely grateful. The rest of the tavern gives you a cheers and you continue with your drinks.',
+                outcome: 'The woman is extremely grateful. The rest of the tavern gives you a cheers and you continue with your drinks. Your reputation increases a bit.',
                 gold: 25,
                 rep: 20
             },
             {
                 id: 'charity',
                 description: 'I\'m on this adventure for the fun and don\'t need all this gold weighing me down! Please use all of this gold to rebuild your neighborhood!',
-                outcome: 'The tavern errupts in cheering and applause. The villagers are so elated that they tell you to come by anytime for free food, drink, and lodging!',
+                outcome: 'The tavern errupts in cheering and applause. Your reputation boons in the village and the locals are so elated that they tell you to come by anytime for free food, drink, and lodging!',
                 gold: 0,
                 rep: 50
             }
