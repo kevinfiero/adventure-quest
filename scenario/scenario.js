@@ -117,6 +117,7 @@ optionButtonDiv.addEventListener('click', () => {
 
     user.gold = currentGold;
     user.rep = currentRep;
+    user.visited.push(scenarios[i].id);
 
     setInLocalStorage('user', user);
 
@@ -124,7 +125,12 @@ optionButtonDiv.addEventListener('click', () => {
 
 
 continueButtonDiv.addEventListener('click', () => {
-    window.location.replace('../map/map.html');
+    if (user.visited.length === 4){
+        window.location.replace('../result/result.html');
+    } else {
+        window.location.replace('../map/map.html');
+    }
+
 });
 
 

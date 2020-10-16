@@ -1,6 +1,6 @@
 export default [
     {
-        id: 'cave',
+        id: 'village',
         title: 'Cave of Gold',
         image: '../assets/cave.jpg',
         description: 'As you set off on your adventure you stumble upon a cave of gold! Lucky you! Overjoyed with happiness you head off to the next village and treat yourself at the local tavern. You buy a round of drinks for everyone and tell them the story. At some point in the night an older woman approaches you and asks if you could help her pay for contractors to help rebuild her neighborhood that burned down. What do you say?',
