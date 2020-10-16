@@ -21,7 +21,7 @@ startButton.addEventListener('click', () => {
         gold: 50,
         visited: []
     };
-    
+
     const checkedRadioButton = document.querySelector(':checked');
 
     let avatar = checkedRadioButton.value;
@@ -34,6 +34,6 @@ startButton.addEventListener('click', () => {
 
     setInLocalStorage('user', user);
 
-    window.location.replace('../map/map.html');
+    window.location.replace('./map/map.html');
 
 });
