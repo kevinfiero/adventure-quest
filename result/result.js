@@ -1,5 +1,5 @@
 import { getFromLocalStorage } from '../utils.js';
-import { gold, rep} from '../data/results.js';
+import { gold, rep } from '../data/results.js';
 
 let goldDiv = document.getElementById('gold-val');
 let repDiv = document.getElementById('rep-val');
