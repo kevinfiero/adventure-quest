@@ -4,7 +4,6 @@ const goldDiv = document.getElementById('gold-val');
 const repDiv = document.getElementById('rep-val');
 const nameDiv = document.getElementById('user-name');
 const avatarDiv = document.getElementById('avatar');
-console.log(avatarDiv);
 
 const user = getFromLocalStorage('user');
 
