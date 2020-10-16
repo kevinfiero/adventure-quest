@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='../styles/reset.css'>
+    <link rel='stylesheet' href='../styles/style.css'>
+    <link rel='stylesheet' href='../styles/header.css'>
+    <link rel='stylesheet' href='../styles/result.css'>
+
+    <title>Adventure Quest!</title>
+</head>
+<body>
+    <header class = 'flex-row'>
+        <label id='title' >Adventure Quest!</label>
+        <div class = 'flex-row right-margin'>
+            <div class='flex-row right-margin'>
+                <label id=user-name></label>
+                <img id='avatar' class='char-icon'>
+            </div>
+            <div class='flex-column'>
+                <div class='flex-row bottom-margin'>
+                    <img class = 'life-assets' src='../assets/star.svg'>
+                    <label id='rep-val'></label>
+                </div>
+                <div class='flex-row'>
+                    <img class = 'life-assets' src='../assets/coins.svg'>
+                    <label id='gold-val'></label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>You have fininshed your quest!</h1>
+        <p></p>
+        <button id='restart-button'>Start Again!</button>
+    </main>
+    <footer>
+        <!-- put name in footer -->
+    </footer>
+    <script type='module' src='result.js'></script>
+</body>
+</html>

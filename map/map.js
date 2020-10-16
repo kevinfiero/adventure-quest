@@ -12,3 +12,9 @@ repDiv.textContent = user.rep;
 nameDiv.textContent = user.name;
 avatarDiv.src = user.avatarURL;
 
+for (let i = 0; user.visited.length; i++){
+    let id = `${user.visited[i]}-link`;
+    let element = document.getElementById(id);
+    element.style.display = 'none';
+}
+
