@@ -40,3 +40,7 @@ input[type='text']{
     font-size: 20px;
 }
 
+#user-info{
+    display: none;
+}
+

@@ -14,50 +14,50 @@
     <title>Adventure Quest!</title>
 </head>
 <body>
-    <header class = 'flex-row'>
+    <header class='flex-row'>
         <label id='title' >Adventure Quest!</label>
-        <div class = 'flex-row right-margin'>
+        <div id='user-info' class='flex-row right-margin'>
             <div class='flex-row right-margin'>
-                <label>Herb</label>
+                <label id=user-name>Herb</label>
                 <img class='char-icon' src='./assets/wizard.svg'>
             </div>
             <div class='flex-column'>
                 <div class='flex-row bottom-margin'>
-                    <img class = 'life-assets'src='./assets/star.svg'>
-                    <label>50</label>
+                    <img class='life-assets'src='./assets/star.svg'>
+                    <label id='rep-val'>50</label>
                 </div>
                 <div class='flex-row'>
-                    <img class = 'life-assets' src='./assets/coins.svg'>
-                    <label>50</label>
+                    <img class='life-assets' src='./assets/coins.svg'>
+                    <label id='gold-val'>50</label>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <label id='choose-char-label'>Choose Your Character!</label>
-        <div id = 'avatar-container'>
+        <div id='avatar-container'>
             <label>
-                <input type='radio' name='avatar' checked>
-                <img class = 'pick-avatar' src='./assets/valkyrie.svg'>
+                <input type='radio' name='avatar' value='valkyrie' checked>
+                <img class='pick-avatar' src='./assets/valkyrie.svg'>
             </label>
             <label>
-                <input type='radio' name='avatar'>
-                <img class = 'pick-avatar' src='./assets/pirate.svg'>
+                <input type='radio' name='avatar' value='pirate'>
+                <img class='pick-avatar' src='./assets/pirate.svg'>
             </label>
             <label>
-                <input type='radio' name='avatar'>
-                <img class = 'pick-avatar' src='./assets/elf.svg'>
+                <input type='radio' name='avatar' value='elf'>
+                <img class='pick-avatar' src='./assets/elf.svg'>
             </label>
             <label>
-                <input type='radio' name='avatar'>
-                <img class = 'pick-avatar' src='./assets/wizard.svg'>
+                <input type='radio' name='avatar' value='wizard'>
+                <img class='pick-avatar' src='./assets/wizard.svg'>
             </label>
             <label>
-                <input type='radio' name='avatar'>
-                <img class = 'pick-avatar' src='./assets/robot.svg'>
+                <input type='radio' name='avatar' value='robot'>
+                <img class='pick-avatar' src='./assets/robot.svg'>
             </label>
         </div>
-        <input id ='name-form' type='text' placeholder='Enter Your Name!'>
+        <input id='name-form' type='text' placeholder='Enter Your Name!'>
         <button id='start-button'>Let's Go!</button>
     </main>
     <footer>
